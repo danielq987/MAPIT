@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form action = "#"> 
+        <h2>Please fill in this from to report a police encounter.</h2>
+        
+        <label for="date_time">Location of Encounter:</label><br>
+        <input type="text" id="location" name="location" value="123 Sesame Street" class="survey_input" required><br>
+
+        <label for="date_time">Date and Time: </label><br>
+        <input type="datetime-local" id="date_time" name="date_time" class="survey_input" required><br>
+
+        <label for="gendetr">Gender:</label><br>
+        <select id="gender" name="gender" class="survey_input">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+        <input type="submit">
+    </form>
+</div>
+
+{% endblock %}
