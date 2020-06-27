@@ -17,10 +17,16 @@ def survey():
     if request.method == "POST":
         location = request.form.get("location")
         datetime = request.form.get("datetime")
+        type_interaction = request.form.get("type_interaction")
+        scale = request.form.get("scale")
+        add_info = request.form.get("add_info")
         gender = request.form.get("gender")
-        
-        sql = ("INSERT INTO survey (location, datetime, gender) VALUES (?, ?, ?)")
-        db.execute(sql, (location, datetime, gender))
+        age = request.form.get("age")
+        race = request.form.get("race")
+        education = request.form.get("education")
+
+        sql = ("INSERT INTO survey (location, datetime, type_interaction, scale, add-info, gender, age, race, education) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
+        db.execute(sql, (location, datetime, type_interaction, scale, add-info, gender, age, race, education))
         db.commit()
         db.close()
 
