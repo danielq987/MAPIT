@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="container">
     <form action = "{{home}}" method = "POST"> 
         <h2>Please fill in this from to report a police encounter.</h2>
@@ -12,14 +14,68 @@
         <label for="date_time">Date and Time: </label><br>
         <input type="datetime-local" id="date_time" name="datetime" class="survey_input" required><br>
 
-        <label for="gendetr">Gender:</label><br>
+        <label for="type_interaction">Categorize the Interaction: </label><br>
+        <select id="type_interaction" name="type_interaction" class="survey_input">
+            <option value="consensual">Consensual encounter</option>
+            <option value="investigatory">Investigatory stop</option>
+            <option value="arres">Arrest</option>
+            <option value="prefer_not_to_say">Prefer Not to Say</option>
+          </select><br>
+          
+          <div class="container-scale">
+            <div class="row">  
+              <div class="col-xs-12">
+                <p class="page-header">From a scale of 1-10, 1 being bad and 10 being good, rate your interaction.</p>
+                <div class="chart-scale">
+                  <button class="btn btn-scale btn-scale-asc-1">1</button>
+                  <button class="btn btn-scale btn-scale-asc-2">2</button>
+                  <button class="btn btn-scale btn-scale-asc-3">3</button>
+                  <button class="btn btn-scale btn-scale-asc-4">4</button>
+                  <button class="btn btn-scale btn-scale-asc-5">5</button>
+                  <button class="btn btn-scale btn-scale-asc-6">6</button>
+                  <button class="btn btn-scale btn-scale-asc-7">7</button>
+                  <button class="btn btn-scale btn-scale-asc-8">8</button>
+                  <button class="btn btn-scale btn-scale-asc-9">9</button>
+                  <button class="btn btn-scale btn-scale-asc-10">10</button> <br>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <label for="add-info">Additional Info:</label><br>
+        <textarea name="add-info" rows="10" cols="30"></textarea><br>
+
+        <label for="gender">Gender:</label><br>
         <select id="gender" name="gender" class="survey_input">
             <option value="male">Male</option>
             <option value="female">Female</option>
+            <option value="non-binary">Non-Binary</option>
             <option value="other">Other</option>
           </select><br>
 
-        <input type="submit" value = "Submit">
+         <label for="age">Age:</label><br>
+          <input type="number" id="age" name="age" class="survey_input"><br>
+
+          <label for="race">Race:</label><br>
+          <select id="race" name="race" class="survey_input">
+              <option value="indigenous">Indigenous</option>
+              <option value="asian">Asian/Pacific Islander</option>
+              <option value="black">Black/African American</option>
+              <option value="hispanic">Hispanic</option>
+              <option value="white">White/Caucasian</option>
+              <option value="other_race">Other</option>
+            </select><br>
+
+          <label for="edu">Highest Degree of Education:</label><br>
+          <select id="edu" name="education" class="survey_input">
+              <option value="high-school">High School or Less</option>
+              <option value="undergrad">Undergraduate Degree</option>
+              <option value="masters">Masters Degree or Higher</option>
+              <option value="associate">Associate Degree</option>
+            </select><br>
+
+        <input type="submit">
     </form>
 </div>
 
