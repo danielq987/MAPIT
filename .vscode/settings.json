@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
+    "python.pythonPath": "/Users/Bonnielu/Documents/Code/MAPIT/venv/bin/python3",
+    "liveServer.settings.port": 5501
+=======
     "python.pythonPath": "c:\\Users\\danie\\myproject\\MAPIT\\venv\\Scripts\\python.exe"
+>>>>>>> 2dd35a70da4763bce444eb47bb09c94ac69f279e
 }
