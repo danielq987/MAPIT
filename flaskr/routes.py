@@ -30,7 +30,7 @@ def survey():
         db.commit()
         db.close()
 
-        return redirect("/")
+        return redirect("home")
     else: 
         return render_template("survey.html")
         
