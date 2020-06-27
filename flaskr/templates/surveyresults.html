@@ -2,6 +2,12 @@
 
 {% block content %}
 
-<li> {{ row["location"] }} ({{row["datetime"] }}) ({{row["gender"] }})</li>
+<!-- <li> {{ rows["location"] }} ({{rows["datetime"] }}) ({{ rows["gender"] }})</li> -->
+
+{% for row in rows %}
+
+<p> location: {{ row[1] }}, datetime: {{ row[2] }}, gender: {{ row[3] }} </p>
+
+{% endfor %}
 
 {% endblock %}
