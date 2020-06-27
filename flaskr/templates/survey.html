@@ -10,21 +10,35 @@
     <form action="survey" method = "POST"> 
       <h2 style="text-align: center;">Please fill in this from to report a police encounter</h2>
       
-      <label for="date_time">Location of Encounter:</label><br>
-      <input type="text" id="location" name="location" value="123 Sesame Street" style = "margin: .8em 0 .8em" class="form-control" required><br>
-  
+      <label for="provinces">Location:</label><br>
+      <select id="provinces" name="provinces" class="form-control form-control-lg" style = "margin: .8em 0 .8em" required>
+       <option value="ontario">Ontario</option>
+       <option value="alberta">Alberta</option>
+       <option value="quebec">Quebec</option>
+       <option value="saskatchewan">Saskatchewan</option>
+       <option value="manitoba">Manitoba</option>
+       <option value="newfoundland">Newfoundland and Labrador</option>
+       <option value="pei">Prince Edward Island</option>
+       <option value="british-colombia">British Colombia</option>
+       <option value="nova-scotia">Nova Scotia</option>
+       <option value="nunavut">Nunavut</option>
+       <option value="territories">Northwest Territories</option>
+       <option value="yukon">Yukon</option>
+       <option value="new brunswick">New Brunswick</option>
+     </select><br>
+     
       <label for="date_time">Date and Time: </label><br>
       <input type="datetime-local" id="date_time" name="datetime" style = "margin: .8em 0 .8em" class="form-control form-control-lg" required><br>
   
       <label for="type_interaction">Categorize the Interaction: </label><br>
-      <select id="type_interaction" name="type_interaction" style = "margin: .8em 0 .8em" class=" form-control form-control-lg">
+      <select id="type_interaction" name="type_interaction" style = "margin: .8em 0" class=" form-control form-control-lg">
           <option value="consensual">Consensual encounter</option>
           <option value="investigatory">Investigatory stop</option>
           <option value="arres">Arrest</option>
           <option value="prefer_not_to_say">Prefer Not to Say</option>
         </select><br>
         
-         <div class="container-scale">
+         <div class="container-scale" style = "margin-top: -3em;">
           <div class="row">  
             <div class="col-xs-12">
               <p class="page-header">From a scale of 1-10, 1 being bad and 10 being good, rate your interaction.</p>
@@ -61,15 +75,20 @@
       <textarea name="add_info" rows="10" cols="100%"></textarea><br>
   
       <label for="gender" style="margin-top:">Gender:</label><br>
-      <select id="gender" name="gender" class="form-control form-control-lg"">
+      <select id="gender" name="gender" class="form-control form-control-lg">
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="non-binary">Non-Binary</option>
           <option value="other">Other</option>
         </select><br>
-  
-       <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age" class="form-control form-control-lg"><br>
+
+        <label for="age" style="margin-top:.8em">Age:</label><br>
+        <select id="age" name="age" class="form-control form-control-lg">
+            <option value="twenty">Under 20</option>
+            <option value="forty">20 - 40</option>
+            <option value="non-binary">40 - 60</option>
+            <option value="other">65+</option>
+          </select><br>
   
         <label for="race">Race:</label><br>
         <select id="race" name="race" class="form-control form-control-lg">
@@ -89,7 +108,7 @@
             <option value="associate">Associate Degree</option>
           </select><br>
 
-          <button class="btn btn-primary" type="submit" >Submit</button>    
+        <button class="btn btn-primary" type="submit" >Submit</button>    
          <!-- <div class="form-group"> Submit Button 
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>     -->
