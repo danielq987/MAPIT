@@ -15,5 +15,7 @@ def survey():
 @app.route('/surveyresults')
 def surveyresults():
     db = sqlite3.connect("survey.db")
-    rows = db.execute("SELECT * FROM survey")
+    d = db.cursor()
+    rows = d.execute("SELECT * FROM survey")
     return render_template("surveyresults.html", rows=rows)    
+    d.close()
