@@ -5,95 +5,97 @@
 {% block content %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="container" style="background: #B0D8E3; padding:1em;">
-  <form action = "{{home}} col-xs-12" method = "POST" style="font-family: sans-serif;"> 
-    <h2>Please fill in this from to report a police encounter.</h2>
-    
-    <label for="date_time">Location of Encounter:</label><br>
-    <input type="text" id="location" name="location" value="123 Sesame Street" style = "margin: .8em 0 .8em" class="survey_input" required><br>
-
-    <label for="date_time">Date and Time: </label><br>
-    <input type="datetime-local" id="date_time" name="datetime" style = "margin: .8em 0 .8em" stclass="survey_input" required><br>
-
-    <label for="type_interaction">Categorize the Interaction: </label><br>
-    <select id="type_interaction" name="type_interaction" style = "margin: .8em 0 .8em" class="survey_input">
-        <option value="consensual">Consensual encounter</option>
-        <option value="investigatory">Investigatory stop</option>
-        <option value="arres">Arrest</option>
-        <option value="prefer_not_to_say">Prefer Not to Say</option>
-      </select><br>
+<div style="background-image: url(skyline.jpg;)">
+  <div class="container" style="background: #B0D8E3; padding:1em; margin-top:-1.4em ; width:fit-content">
+    <form action = "{{home}} col-xs-12" method = "POST"> 
+      <h2 style="text-align: center;">Please fill in this from to report a police encounter</h2>
       
-       <div class="container-scale">
-        <div class="row">  
-          <div class="col-xs-12">
-            <p class="page-header">From a scale of 1-10, 1 being bad and 10 being good, rate your interaction.</p>
-                <div class="chart-scale" name="scale"> 
-                <input type="radio" id="one" name="scale" value="1">
-                <label for="one"  style = "margin-right: .8em" >1 </label>
-                <input type="radio" id="two" name="scale" value="2">
-                <label for="two"  style = "margin-right: .8em" >2</label>
-                <input type="radio" id="three" name="scale" value="3">
-                <label for="three"  style = "margin-right: .8em" >3</label>
-                <input type="radio" id="four" name="scale" value="4">
-                <label for="four"  style = "margin-right: .8em" >4</label>
-                <input type="radio" id="five" name="scale" value="5">
-                <label for="one"  style = "margin-right: .8em" >5</label>
-                <input type="radio" id="six" name="scale" value="6">
-                <label for="one"  style = "margin-right: .8em" >6</label>
-                <input type="radio" id="seven" name="scale" value="7">
-                <label for="one"  style = "margin-right: .8em" >7</label>
-                <input type="radio" id="eight" name="scale" value="8">
-                <label for="one"  style = "margin-right: .8em" >8</label>
-                <input type="radio" id="nine" name="scale" value="9">
-                <label for="one"  style = "margin-right: .8em" >9</label>
-                <input type="radio" id="ten" name="scale" value="10">
-                <label for="ten"  style = "margin-right: .8em" >10</label>
-
-                <br>
-
-            </div> 
-          </div>
-        </div>
-      </div> 
-
-    <label for="add_info">Additional Info:</label><br>
-    <textarea name="add_info" rows="10" cols="30"></textarea><br>
-
-    <label for="gender">Gender:</label><br>
-    <select id="gender" name="gender" class="survey_input">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="non-binary">Non-Binary</option>
-        <option value="other">Other</option>
-      </select><br>
-
-     <label for="age">Age:</label><br>
-      <input type="number" id="age" name="age" class="survey_input"><br>
-
-      <label for="race">Race:</label><br>
-      <select id="race" name="race" class="survey_input">
-          <option value="indigenous">Indigenous</option>
-          <option value="asian">Asian/Pacific Islander</option>
-          <option value="black">Black/African American</option>
-          <option value="hispanic">Hispanic</option>
-          <option value="white">White/Caucasian</option>
-          <option value="other_race">Other</option>
-        </select><br>
-
-      <label for="edu">Highest Degree of Education:</label><br>
-      <select id="edu" name="education" class="survey_input">
-          <option value="high-school">High School or Less</option>
-          <option value="undergrad">Undergraduate Degree</option>
-          <option value="masters">Masters Degree or Higher</option>
-          <option value="associate">Associate Degree</option>
-        </select><br>
-
-        <div class="form-group"> <!-- Submit Button -->
-          <button type="submit" class="btn btn-primary">Buy!</button>
-        </div>     
-  </form>
+      <label for="date_time">Location of Encounter:</label><br>
+      <input type="text" id="location" name="location" value="123 Sesame Street" style = "margin: .8em 0 .8em" class="form-control" required><br>
   
+      <label for="date_time">Date and Time: </label><br>
+      <input type="datetime-local" id="date_time" name="datetime" style = "margin: .8em 0 .8em" class="form-control form-control-lg" required><br>
+  
+      <label for="type_interaction">Categorize the Interaction: </label><br>
+      <select id="type_interaction" name="type_interaction" style = "margin: .8em 0 .8em" class=" form-control form-control-lg">
+          <option value="consensual">Consensual encounter</option>
+          <option value="investigatory">Investigatory stop</option>
+          <option value="arres">Arrest</option>
+          <option value="prefer_not_to_say">Prefer Not to Say</option>
+        </select><br>
+        
+         <div class="container-scale">
+          <div class="row">  
+            <div class="col-xs-12">
+              <p class="page-header">From a scale of 1-10, 1 being bad and 10 being good, rate your interaction.</p>
+                  <div class="chart-scale" name="scale"> 
+                  <input type="radio" id="one" name="scale" value="1">
+                  <label for="one"  style = "margin-right: .8em" >1 </label>
+                  <input type="radio" id="two" name="scale" value="2">
+                  <label for="two"  style = "margin-right: .8em" >2</label>
+                  <input type="radio" id="three" name="scale" value="3">
+                  <label for="three"  style = "margin-right: .8em" >3</label>
+                  <input type="radio" id="four" name="scale" value="4">
+                  <label for="four"  style = "margin-right: .8em" >4</label>
+                  <input type="radio" id="five" name="scale" value="5">
+                  <label for="one"  style = "margin-right: .8em" >5</label>
+                  <input type="radio" id="six" name="scale" value="6">
+                  <label for="one"  style = "margin-right: .8em" >6</label>
+                  <input type="radio" id="seven" name="scale" value="7">
+                  <label for="one"  style = "margin-right: .8em" >7</label>
+                  <input type="radio" id="eight" name="scale" value="8">
+                  <label for="one"  style = "margin-right: .8em" >8</label>
+                  <input type="radio" id="nine" name="scale" value="9">
+                  <label for="one"  style = "margin-right: .8em" >9</label>
+                  <input type="radio" id="ten" name="scale" value="10">
+                  <label for="ten"  style = "margin-right: .8em" >10</label>
+  
+                  <br>
+  
+              </div> 
+            </div>
+          </div>
+        </div> 
+  
+      <label for="add_info">Additional Info:</label><br>
+      <textarea name="add_info" rows="10" cols="100%"></textarea><br>
+  
+      <label for="gender">Gender:</label><br>
+      <select id="gender" name="gender" class="form-control form-control-lg" style="margin-top: .8em;">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="non-binary">Non-Binary</option>
+          <option value="other">Other</option>
+        </select><br>
+  
+       <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" class="form-control form-control-lg"><br>
+  
+        <label for="race">Race:</label><br>
+        <select id="race" name="race" class="form-control form-control-lg">
+            <option value="indigenous">Indigenous</option>
+            <option value="asian">Asian/Pacific Islander</option>
+            <option value="black">Black/African American</option>
+            <option value="hispanic">Hispanic</option>
+            <option value="white">White/Caucasian</option>
+            <option value="other_race">Other</option>
+          </select><br>
+  
+        <label for="edu">Highest Degree of Education:</label><br>
+        <select id="edu" name="education" class="form-control form-control-lg">
+            <option value="high-school">High School or Less</option>
+            <option value="undergrad">Undergraduate Degree</option>
+            <option value="masters">Masters Degree or Higher</option>
+            <option value="associate">Associate Degree</option>
+          </select><br>
+  
+          <div class="form-group"> <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Buy!</button>
+          </div>     
+    </form>
+</div>
 
 </div>
+
 
 {% endblock %}
