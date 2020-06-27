@@ -5,12 +5,12 @@
 {% block leaflet %}
 
 <!-- LEAFLET CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
 
 <!-- https://gis.stackexchange.com/questions/68489/loading-external-geojson-file-into-leaflet-map -->
 <script src="static/ajax.js"></script>
@@ -19,7 +19,17 @@ crossorigin=""></script>
 
 {% block content %}
 
-<h2> Welcome to the Home Page</h2>
+<style> 
+    body {
+      background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+    }
+</style>
+    
+<h2 align=center> Welcome to MAPIT- Mapping Police Interactions</h2>
 
 <div id="mapid" style="width: 600px; height: 400px;"></div>
     <script src="static/map.js"></script>
