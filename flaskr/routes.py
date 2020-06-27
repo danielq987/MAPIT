@@ -25,8 +25,8 @@ def survey():
         race = request.form.get("race")
         education = request.form.get("education")
 
-        sql = ("INSERT INTO survey (location, datetime, type_interaction, scale, add-info, gender, age, race, education) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
-        db.execute(sql, (location, datetime, type_interaction, scale, add-info, gender, age, race, education))
+        sql = ("INSERT INTO survey (location, datetime, type_interaction, scale, add_info, gender, age, race, education) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
+        db.execute(sql, (location, datetime, type_interaction, scale, add_info, gender, age, race, education))
         db.commit()
         db.close()
 
