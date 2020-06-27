@@ -4,10 +4,35 @@
 
 <!-- <li> {{ rows["location"] }} ({{rows["datetime"] }}) ({{ rows["gender"] }})</li> -->
 
-{% for row in rows %}
+<table class='table table-bordered table-striped'>
+<table id='surveyresultstable' class='table table-bordered'>
 
-<p> location: {{ row[1] }}, datetime: {{ row[2] }}, gender: {{ row[3] }} </p>
+    <tr>
+        <th>Location</th>
+        <th>Date and Time</th>
+        <th>Interaction Type</th>
+        <th>Scale Rating</th>
+        <th>Additional Information</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Race</th>
+        <th>Education</th>
+    </tr>
 
-{% endfor %}
+    {% for row in rows %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+            <td>{{ row[9] }}</td>
+        </tr>
+    {% endfor %} 
+
+</table>
 
 {% endblock %}
