@@ -2,12 +2,26 @@
 <html lang="en">
     <head>
         <title>MAPIT</title>
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
+        <div class="container">
+            <header>
+                <img src="images/MAPIT.svg" alt="logo" class="logo">
+        
+                <nav>
+                    <ul id="nav">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="survey.html">Add Your Data</a></li>
+                        <li><a href="surveyresults.html">Results</a></li>
+                    </ul>
+                </nav>
+        </header>
+        </div>
         {% block content %}{% endblock %}
     </body>
 </html>
