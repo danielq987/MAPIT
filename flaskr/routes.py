@@ -5,6 +5,7 @@ import sqlite3
 
 @app.route('/')
 @app.route('/index')
+@app.route('/home')
 def index():
     return render_template("home.html")
 
@@ -17,5 +18,4 @@ def surveyresults():
     db = sqlite3.connect("survey.db")
     d = db.cursor()
     rows = d.execute("SELECT * FROM survey")
-    return render_template("surveyresults.html", rows=rows)    
-    d.close()
+    return render_template("surveyresults.html", rows=rows)
