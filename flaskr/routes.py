@@ -1,6 +1,8 @@
 from flaskr import app
 from flask import Flask, render_template
 
+import sqlite3
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -12,4 +14,7 @@ def survey():
 
 @app.route('/surveyresults')
 def surveyresults():
-    return render_template('surveyresults.html')
+    db = sqlite3.connect("survey.db")
+    rows = db.execute("SELECT * FROM survey")
+    print(rows)
+    return render_template("surveyresults.html", rows=rows)    
