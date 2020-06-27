@@ -5,14 +5,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container">
-    <form action = "#"> 
+    <form action = "{{home}}" method = "POST"> 
         <h2>Please fill in this from to report a police encounter.</h2>
         
         <label for="date_time">Location of Encounter:</label><br>
         <input type="text" id="location" name="location" value="123 Sesame Street" class="survey_input" required><br>
 
         <label for="date_time">Date and Time: </label><br>
-        <input type="datetime-local" id="date_time" name="date_time" class="survey_input" required><br>
+        <input type="datetime-local" id="date_time" name="datetime" class="survey_input" required><br>
 
         <label for="type_interaction">Categorize the Interaction: </label><br>
         <select id="type_interaction" name="type_interaction" class="survey_input">

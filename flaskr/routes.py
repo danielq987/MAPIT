@@ -1,5 +1,5 @@
 from flaskr import app
-from flask import Flask, render_template
+from flask import Flask, redirect, request, render_template
 
 import sqlite3
 
@@ -9,9 +9,26 @@ import sqlite3
 def index():
     return render_template("home.html")
 
-@app.route('/survey')
+@app.route('/survey', methods=["GET", "POST"])
 def survey():
-    return render_template('survey.html')
+
+    db = sqlite3.connect("survey.db")
+
+    if request.method == "POST":
+        location = request.form.get("location")
+        datetime = request.form.get("datetime")
+        gender = request.form.get("gender")
+        
+        sql = ("INSERT INTO survey (location, datetime, gender) VALUES (?, ?, ?)")
+        db.execute(sql, (location, datetime, gender))
+        db.commit()
+        db.close()
+
+        return redirect("/")
+    else: 
+        return render_template("survey.html")
+        
+        
 
 @app.route('/surveyresults')
 def surveyresults():
