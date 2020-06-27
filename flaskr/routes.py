@@ -16,5 +16,4 @@ def survey():
 def surveyresults():
     db = sqlite3.connect("survey.db")
     rows = db.execute("SELECT * FROM survey")
-    print(rows)
     return render_template("surveyresults.html", rows=rows)    
