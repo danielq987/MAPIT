@@ -12,24 +12,34 @@
     <body>
         <ul class="nav nav-pills mb-3 navbar-expand-lg" style="background-color: #e3f2fd;" id="pills-tab" role="tablist">
 
-          <li class="nav-item">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="home" role="tab" aria-controls="pills-home">MAPIT</a>
+          <li class="nav-item" id="home-btn">
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="home" role="tab" aria-controls="pills-home" target="_blank">MAPIT</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" id="pills-data-tab" data-toggle="pill" href="survey" role="tab" aria-controls="pills-data">Add Your Data</a>
-          </li> 
-          <li class="nav-item">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="{{home}}" role="tab" aria-controls="pills-home" aria-selected="true">MAPIT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="{{survey}}" role="tab" aria-controls="pills-profile" aria-selected="false">Add Your Data</a>
-            </li> -->  
+          <li class="nav-item" id="survey-btn">
+            <a class="nav-link" id="pills-data-tab" data-toggle="pill" href="survey" role="tab" aria-controls="pills-data" target="_blank">Add Your Data</a>
+          </li>  
         </ul>
-        original code <div class="tab-content" id="pills-tabContent">
+        <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
-          </div>  
+          </div> 
+
+        <script> 
+            var homeBtn = document.getElementById("home-btn");
+            var surveyBtn= document.getElementById("survey-btn");
+
+            homeBtn.addEventListener("click", function(e) {
+                window.location.href = "home";
+                e.preventDefault; 
+            });
+
+            surveyBtn.addEventListener("click", function(e) {
+                window.location.href = "survey";
+                e.preventDefault; 
+            });
+
+        </script>  
         {% block content %}{% endblock %}
     </body>
 </html>
