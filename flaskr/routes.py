@@ -9,3 +9,7 @@ def index():
 @app.route('/survey')
 def survey():
     return render_template('survey.html')
+
+@app.route('/surveyresults')
+def surveyresults():
+    return render_template('surveyresults.html')
