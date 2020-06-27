@@ -3,22 +3,22 @@
 # MAPIT
 we doing thing
 
-# Inspiration
+## Inspiration
 
 
-# What it does
+## What it does
 
 
-# How we built it
+## How we built it
 
 
-# Challenges we ran into
+## Challenges we ran into
 
 
-# Accomplishments that we are proud of
+## Accomplishments that we are proud of
 
 
-# What we learned
+## What we learned
 
 
-# What's next for MAPIT
+## What's next for MAPIT
