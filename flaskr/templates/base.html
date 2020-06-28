@@ -8,6 +8,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                }
+        </style>
     </head>
         {% block leaflet %} {% endblock %} 
     <body>
@@ -53,5 +60,6 @@
 
         </script>  
         {% block content %}{% endblock %}
+        <img src="static/bobross.png" alt="" height=200 class=center>
     </body>
 </html>

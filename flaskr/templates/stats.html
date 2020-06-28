@@ -10,8 +10,8 @@
     <div style="margin: 2em;">
         <canvas id="myChart" width="400" height="200"></canvas>
     </div>
-    
-    <script>
+  
+  <script>
         var ctx = document.getElementById("myChart").getContext("2d");
         var myChart = new Chart(ctx, {
             type: 'bar',
@@ -50,7 +50,7 @@
         }
     });
     
-    </script>
+    </script> 
 
     <table id='stats_table' class='table tablae-bordered table-striped' style="text-align: center;">
 
@@ -74,8 +74,6 @@
     $(document).ready(function () {
         showGraph();
     });
-
-
     function showGraph()
     {
         {
@@ -85,12 +83,10 @@
                 console.log(data);
                  var name = [];
                  var marks = [];
-
                 for (var i in data) {
                     name.push(data[i].student_name);
                     marks.push(data[i].marks);
                 }
-
                 var chartdata = {
                     labels: name,
                     datasets: [
@@ -104,9 +100,7 @@
                         }
                     ]
                 };
-
                 var graphTarget = $("#graphCanvas");
-
                 var barGraph = new Chart(graphTarget, {
                     type: 'bar',
                     data: chartdata
