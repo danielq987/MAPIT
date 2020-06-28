@@ -2,7 +2,7 @@ from flaskr import app
 from flask import Flask, redirect, request, render_template
 
 import sqlite3
-import pygeoj
+# import pygeoj
 
 @app.route('/')
 @app.route('/index')
