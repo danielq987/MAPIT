@@ -121,7 +121,14 @@
             <option value="associate">Associate Degree</option>
           </select><br>
 
-        <button class="btn btn-primary" type="submit" >Submit</button>    
+        <button onclick="al()" class="btn btn-primary" type="submit" >Submit</button>
+        <h2 id="submitted" style="text-align: center;"></h2>
+        <script>
+          function al(){
+            alert("Thank you for your input!")
+            document.getElementById("submitted").innerHTML = "Thank you for your input!"
+          }
+        </script>  
          <!-- <div class="form-group"> Submit Button 
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>     -->

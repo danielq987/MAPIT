@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     </head>
         {% block leaflet %} {% endblock %} 
     <body>
@@ -16,11 +17,12 @@
             <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="home" role="tab" aria-controls="pills-home" >MAPIT</a>
           </li>
           <li class="nav-item" id="survey-btn">
-            <a class="nav-link" id="pills-data-tab" data-toggle="pill" href="survey" role="tab" aria-controls="pills-data"">Add Your Data</a>
+            <a class="nav-link" id="pills-survey-tab" data-toggle="pill" href="survey" role="tab" aria-controls="pills-data"">Add Your Data</a>
           </li>  
           <li class="nav-item" id="stats-btn">
-            <a class="nav-link" id="pills-data-tab" data-toggle="pill" href="stats" role="tab" aria-controls="pills-data"">Stats</a>
-          </li>  
+            <a class="nav-link" id="pills-stats-tab" data-toggle="pill" href="stats" role="tab" aria-controls="pills-data"">Stats</a>
+          </li>
+          
 
         </ul>
         <div class="tab-content" id="pills-tabContent">
