@@ -11,16 +11,10 @@ def index():
     # gfile = pygeoj.load(filepath="C:/Users/danie/myproject/MAPIT/flaskr/static/canada.geojson")
     # db = sqlite3.connect("survey.db")
 
-    # sql = db.execute("SELECT province, [average rating] from [tablename]")
-
-    # for feature in gfile:
-    #     province = feature.properties["name"]
-    #     for row in sql:
-    #         if row[0] == province:
-    #             a = row
-    #             break
-    #     feature.properties["average"] = a[1]
-    # db.close()
+    # sql = db.execute("SELECT location, average from stats")
+    # d = ""
+    # for row in sql:
+    #     d = d + str(row[1])
     return render_template("home.html")
 
 @app.route('/survey', methods=["GET", "POST"])

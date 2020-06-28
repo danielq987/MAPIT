@@ -60,7 +60,7 @@
 </div>
 
 <div id="mapid" style="width: 1200px; height: 600px; display:block; margin-left: auto; margin-right: auto; margin-bottom: 2em;"></div>
-    <script type="text/javascript" src="static/js/canada.js"></script>
+    <script type="text/javascript" src="static/js/canada2.js"></script>
     <script>
                 //legacy -> tried to add text on click
         //var info = L.control();
@@ -68,40 +68,43 @@
         //    alert();
         //    document.getElementById("description").innerHTML = "aaaaaa" + properties.name + "<br>" + properties.average;
         //}
-        //function whenClicked(e) {
-        //    // e = event
-        //    console.log(e);
-        //    info.update(layer.feature.properties);
-        //    }
-        //function onEachFeature(feature, layer) {
+    
+        function whenClicked(e) {
+            // e = event
+            console.log(feature.name);
+            info.update(layer.feature.properties);
+            }
+        function onEachFeature(feature, layer) {
+            var a = feature.properties.name;
+            layer.bindPopup("<b>" + a + "</b>" + "<br>Average Police Satisfaction:<b>" + feature.properties.cartodb_id + "</b>");
             //bind click
-        //    layer.on({
-        //        click: whenClicked
-        //    });
-        //}
+            layer.on({
+                click: whenClicked
+            });
+        }
         
         // get color depending on population density value
 
-        function getColor(d) {
-            return d > 4.2 ? '#800026' :
-                    d > 3.4  ? '#BD0026' :
-                    d > 2.6  ? '#E31A1C' :
-                    d > 1.8  ? '#FC4E2A' :
-                    d > 1.0   ? '#FD8D3C' :
-                    d > 0   ? '#FEB24C':
-                                '#FED976';
-        }
+        //function getColor(d) {
+        //    return d > 4.2 ? '#800026' :
+        //            d > 3.4  ? '#BD0026' :
+        //            d > 2.6  ? '#E31A1C' :
+        //            d > 1.8  ? '#FC4E2A' :
+        //            d > 1.0   ? '#FD8D3C' :
+        //            d > 0   ? '#FEB24C':
+        //                        '#FED976';
+        //}
 
-        function style(feature) {
-            return {
-                weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
-                fillOpacity: 0.7,
-                fillColor: getColor(feature.properties.average)
-            };
-        }
+        //function style(feature) {
+        //    return {
+        //        weight: 2,
+        //        opacity: 1,
+        //        color: 'white',
+        //        dashArray: '3',
+        //        fillOpacity: 0.7,
+        //        fillColor: getColor(feature.properties.average)
+        //    };
+        //}
 
         var mymap = L.map('mapid').setView([43.8908662,-79.45511119999999], 4); L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGFuaWVscTk4NyIsImEiOiJja2J5MHo3Z3AwN28xMnh0Nm1pNWl6bWUwIn0.qzRYT-YDVflk9jfeJx6Fxg', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -116,7 +119,7 @@
         //geojsonLayer.addTo(mymap);
 
         var geojson = L.geoJson(provinces, {
-            style:style
+            onEachFeature: onEachFeature
         }).addTo(mymap);
         </script>
 {% endblock %}
