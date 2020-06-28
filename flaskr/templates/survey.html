@@ -20,7 +20,7 @@
 
 <div>
   <div class="container" style="background: #e3f2fd; padding:1em; width:fit-content; padding-left: 3%; padding-right: 3%; padding-bottom: 3%; margin-bottom: 2%;">
-    <form action="survey" method = "POST"> 
+    <form action="survey" method = "POST" style="font-family: Montserrat;"> 
       <h2 style="text-align: center;">Please fill in this from to report a police encounter</h2>
       
       <label for="provinces">Location:</label><br>
@@ -126,7 +126,14 @@
             <option value="associate">Associate Degree</option>
           </select><br>
 
-        <button class="btn btn-primary" type="submit" >Submit</button>    
+        <button onclick="al()" class="btn btn-primary" type="submit" >Submit</button>
+        <h2 id="submitted" style="text-align: center;"></h2>
+        <script>
+          function al(){
+            alert("Thank you for your input!")
+            document.getElementById("submitted").innerHTML = "Thank you for your input!"
+          }
+        </script>  
          <!-- <div class="form-group"> Submit Button 
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>     -->
