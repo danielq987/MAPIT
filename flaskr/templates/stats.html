@@ -11,9 +11,15 @@
         <h5 style="font-family: Montserrat; text-align: center;">Average Rating of Interactions Between Public and Police in Canada</h5>
         <canvas id="myChart" width="400" height="200"></canvas>
     </div>
+<<<<<<< HEAD
     
     <script>
         const ctx = document.getElementById("myChart").getContext("2d");
+=======
+  
+  <script>
+        var ctx = document.getElementById("myChart").getContext("2d");
+>>>>>>> b03c88b7bdb7b0329f9d8c841a1a394ac611887f
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -66,7 +72,7 @@
         }
     });
     
-    </script>
+    </script> 
 
     <table id='stats_table' class='table tablae-bordered table-striped' style="text-align: center;">
 
@@ -83,4 +89,51 @@
     </table>
 </div>
 
+<<<<<<< HEAD
+=======
+
+
+<!-- 
+<script>
+    $(document).ready(function () {
+        showGraph();
+    });
+    function showGraph()
+    {
+        {
+            $.post("data.php",
+            function (data)
+            {
+                console.log(data);
+                 var name = [];
+                 var marks = [];
+                for (var i in data) {
+                    name.push(data[i].student_name);
+                    marks.push(data[i].marks);
+                }
+                var chartdata = {
+                    labels: name,
+                    datasets: [
+                        {
+                            label: 'Student Marks',
+                            backgroundColor: '#49e2ff',
+                            borderColor: '#46d5f1',
+                            hoverBackgroundColor: '#CCCCCC',
+                            hoverBorderColor: '#666666',
+                            data: marks
+                        }
+                    ]
+                };
+                var graphTarget = $("#graphCanvas");
+                var barGraph = new Chart(graphTarget, {
+                    type: 'bar',
+                    data: chartdata
+                });
+            });
+        }
+    }
+    </script>-->
+
+
+>>>>>>> b03c88b7bdb7b0329f9d8c841a1a394ac611887f
 {% endblock %}
