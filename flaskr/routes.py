@@ -42,3 +42,11 @@ def surveyresults():
     d = db.cursor()
     rows = d.execute("SELECT * FROM survey")
     return render_template("surveyresults.html", rows=rows)
+
+
+@app.route('/stats')
+def stats():
+    db = sqlite3.connect("survey.db")
+    d = db.cursor()
+    rows = d.execute("SELECT avg(scale), location  FROM survey GROUP BY location;")
+    return render_template("stats.html", rows=rows)

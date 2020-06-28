@@ -2,4 +2,27 @@
 
 {% block content %}
 
+<h2> Statistics</h2>
+
+<p>These are the statistics for each province.</p>
+
+<p> You must reload the page to see the most up to date data</p>
+
+<table class='table table-bordered table-striped'>
+<table id='stats_table' class='table table-bordered'>
+
+    <tr>
+        <th>Location</th>
+        <th>Average Rating</th>
+    </tr>
+
+    {% for row in rows %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[0] }}</td>
+        </tr>
+    {% endfor %} 
+
+</table>
+
 {% endblock %}
