@@ -42,6 +42,11 @@ def survey():
         sql = ("INSERT INTO survey (location, datetime, type_interaction, scale, add_info, gender, age, race, education) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
         db.execute(sql, (location, datetime, type_interaction, scale, add_info, gender, age, race, education))
         db.commit()
+    
+
+        sql2 = ("UPDATE stats SET average = (SELECT avg(scale) FROM survey WHERE survey.location = stats.location);")
+        db.execute(sql2)
+        db.commit()
         db.close()
 
         return redirect("home")
@@ -56,3 +61,11 @@ def surveyresults():
     d = db.cursor()
     rows = d.execute("SELECT * FROM survey")
     return render_template("surveyresults.html", rows=rows)
+
+
+@app.route('/stats')
+def stats():
+    db = sqlite3.connect("survey.db")
+    d = db.cursor()
+    rows = d.execute("SELECT avg(scale), location  FROM survey GROUP BY location;")
+    return render_template("stats.html", rows=rows)

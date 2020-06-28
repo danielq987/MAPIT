@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="background: #1b2d38;color: white;font-family:Montserrat;padding:2em;text-align: center;" > Statistics</h2>
+
+<div class="container">
+    <h5 style="font-family: Montserrat;">These are the statistics for each province. You must reload the page to see the most up to date data</p>
+    <table id='stats_table' class='table tablae-bordered table-striped' style="text-align: center;">
+
+        <tr>
+            <th  style="text-align: center;">Location</th>
+            <th  style="text-align: center;">Average Rating</th>
+        </tr>
+    
+        {% for row in rows %}
+            <tr>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[0] }}</td>
+            </tr>
+        {% endfor %} 
+    
+    </table>
+</div>
+
+
+{% endblock %}

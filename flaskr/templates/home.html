@@ -20,18 +20,51 @@
 
 <style> 
     body {
-      background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+      background:white;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       background-size: cover;
-      -o-background-size: cover;
+      -o-background-size: cover; 
     }
+
+    .heading {
+        background: #1b2d38;
+        color: white;
+        font-family: "Montserrat";
+        padding:2em;
+        margin-top:"-4em";
+    }
+
+    .logo {
+        width:70px;
+        position: absolute;
+        right: 210px;
+        animation: move 1s infinite alternate;  
+    }
+
+    @keyframes move {
+        /*defines animation — keyframes */
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+
 </style>
     
-<h2 align=center> Welcome to MAPIT- Mapping Police Interactions</h2>
+<div class="header">
+    <img src="static/logo.png" ALIGN=”right” alt="logo" class="logo" id="icon">
+    <h2 align=center class= "heading" style="margin-bottom: 1em;" id="large-title"> Welcome to MAPIT: Mapping Police Interactions</h2> 
+</div>
 
+<<<<<<< HEAD
 <div id="mapid" style="width: 1200px; height: 600px"></div>
 <h3 id="description"></h3>
+=======
+<div id="mapid" style="width: 1200px; height: 600px; display:block; margin-left: auto; margin-right: auto; margin-bottom: 2em;"></div>
+>>>>>>> 74b2240efec490c261ddbb959b0caac82b8213c2
     <script type="text/javascript" src="static/js/canada.js"></script>
     <script>
                 //legacy -> tried to add text on click
