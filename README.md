@@ -2,6 +2,10 @@
 
 MAPIT, or **Ma**pping **P**olice **I**n**t**eraction, is a web application that allows users to submit reports on police interactions. The goal is to aggregate data, allowing the public to use this information for a variety of things, ranging from keeping the police accountable, to identifying areas of over policing, to tackling problems of systemic nature through the identification of trends in data. 
 
+[Devpost](https://devpost.com/software/mapit-06gcwi)
+
+[Demo](https://youtu.be/rLeZfpCF5ZU)
+
 ## Inspiration
 
 With increased attention drawn towards the systemic problems such as racism that can be found in police forces and the lack of data regarding it, we decided to build a program that would give power back to the people and constituents who would be able to use this data to not only educate people around them but be used to support the development of better policies, regulations and laws on all levels of government.
@@ -39,3 +43,6 @@ As **extremely** new hackers, we learned a number of skills that enabled us to b
 * Developing a mobile-friendly website or app for ease of access
 * Consider safety issues in terms of location tracking, user safety, etc.
 * Polish and improve user interface
+
+<img style="display: inline" src="/flaskr/static/bobross.png" alt="Bob Ross MS Paint" width="30%">
+
