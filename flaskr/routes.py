@@ -2,11 +2,25 @@ from flaskr import app
 from flask import Flask, redirect, request, render_template
 
 import sqlite3
+import pygeoj
 
 @app.route('/')
 @app.route('/index')
 @app.route('/home')
 def index():
+    # gfile = pygeoj.load(filepath="C:/Users/danie/myproject/MAPIT/flaskr/static/canada.geojson")
+    # db = sqlite3.connect("survey.db")
+
+    # sql = db.execute("SELECT province, [average rating] from [tablename]")
+
+    # for feature in gfile:
+    #     province = feature.properties["name"]
+    #     for row in sql:
+    #         if row[0] == province:
+    #             a = row
+    #             break
+    #     feature.properties["average"] = a[1]
+    # db.close()
     return render_template("home.html")
 
 @app.route('/survey', methods=["GET", "POST"])
