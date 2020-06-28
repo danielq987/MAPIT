@@ -28,6 +28,11 @@ def survey():
         sql = ("INSERT INTO survey (location, datetime, type_interaction, scale, add_info, gender, age, race, education) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")
         db.execute(sql, (location, datetime, type_interaction, scale, add_info, gender, age, race, education))
         db.commit()
+    
+
+        sql2 = ("UPDATE stats SET average = (SELECT avg(scale) FROM survey WHERE survey.location = stats.location);")
+        db.execute(sql2)
+        db.commit()
         db.close()
 
         return redirect("home")
